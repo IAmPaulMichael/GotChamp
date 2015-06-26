@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html ng-app="gotChamp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>GotChamp</title>
+    @Scripts.Render("~/bundles/modernizr")
+    <base href="/" />
+    <link href="~/Scripts/Plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Client/src/app/style.css" rel="stylesheet" />
+    <link href="~/Client/src/bootstrap-fileupload/css/bootstrap-fileupload.min.css" rel="stylesheet" />
+    <link href="~/Scripts/Plugins/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="~/Scripts/Plugins/waitMe/waitMe.min.css" rel="stylesheet" />
+
+
+
+    <link href="Client/src/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="Client/src/bootstrap/dist/css/reset.css" rel="stylesheet">
+    <link href="Client/src/bootstrap/dist/css/layout.css" rel="stylesheet">
+    <link href="Client/src/bootstrap/dist/css/components.css" rel="stylesheet">
+    <link href="Client/src/bootstrap/dist/css/plugins.css" rel="stylesheet">
+    <link href="Client/src/bootstrap/dist/css/themes/default.theme.css" rel="stylesheet">
+
+
+    <link href="Client/src/bootstrap/dist/css/components.css" rel="stylesheet">
+    <link href="Client/src/bootstrap/dist/css/plugins.css" rel="stylesheet">
+    <link href="Client/src/bootstrap/dist/css/themes/default.theme.css" rel="stylesheet">
+    <link href="Client/src/dropzone/css/dropzone.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - GotChamp</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+    <script src="http://www.geoplugin.net/javascript.gp"></script>
+    <script src="~/Scripts/Plugins/angular/angular.js"></script>
+    <script src="~/Scripts/Plugins/angular/angular-route.js"></script>
+    <script src="~/Scripts/Plugins/angular/angular-resource.min.js"></script>
+    <script src="~/Scripts/Plugins/toastr/toastr.min.js"></script>
+    <script src="~/Scripts/Plugins/angular/angular-animate.min.js"></script>
+    <script src="~/Scripts/Plugins/angular/angular-cookies.min.js"></script>
+    <script src="~/Scripts/Plugins/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="~/Scripts/Plugins/angular/angular-touch.min.js"></script>
+    <script src="~/Scripts/Plugins/angular/angular-sanitize.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Plugins/waitMe/waitMe.min.js"></script>
+    <!--Module-->
+    <script src="~/Client/src/app/index.js"></script>
+    <script src="~/Client/src/app/authService.js"></script>
+    <script src="~/Client/src/app/authInterceptorService.js"></script>
+    <script src="~/Client/src/app/registration/register.countries.js"></script>
+
+    <!--Controllers-->
+    <script src="~/Client/src/app/components/navbar/navbar.controller.js"></script>
+    <script src="~/Client/src/app/main/main.controller.js"></script>
+    <script src="~/Client/src/app/login/login.controller.js"></script>
+    <script src="~/Client/src/app/registration/register.controller.js"></script>
+    <script src="~/Client/src/app/goodluck/goodluck.controller.js"></script>
+    <script src="~/Client/src/app/ads/ads.controller.js"></script>
+    <script src="~/Client/src/app/admin/overview/overview.controller.js"></script>
+    <script src="~/Client/src/app/TAC/tac.controller.js"></script>
+
+    <!--admin-->
+    <script src="~/Client/src/app/admin/manage/management.controller.js"></script>
+    <script src="~/Client/src/app/admin/ads/detail/detail.controller.js"></script>
+
+    <script src="Client/src/dropzone/dropzone.js"></script>
+    <script src="Client/src/bootstrap-fileupload/js/bootstrap-fileupload.min.js"></script>
+</body>
+</html>

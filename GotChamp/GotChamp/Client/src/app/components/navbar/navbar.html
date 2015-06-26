@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavbarCtrl" ng-init="getLocation(); ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+       GotChamp
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+      <ul class="nav navbar-nav">
+        <li class=""><a ng-href="/">Play Game</a></li>
+        <li><a ng-href="/about">How it Works</a></li>
+        <li><a ng-href="/contact">Rules & Mechanics</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a ng-href="">Help & Support</a></li>
+        <li><a ng-href="/contact">FAQ</a></li>
+        <li>
+        <form data-ng-hide="!authentication.isAuth" class="navbar-form">
+            <div class="form-group">
+              <button class="btn btn-warning" ng-click="signOut()">SignOut</button>
+             </div>
+          </form>
+          <form data-ng-hide="authentication.isAuth"  class="navbar-form">
+            <div class="form-group">
+              <a class="btn btn-primary" ng-href="/register" role="button">Register</a>
+             </div>
+             <div class="form-group">
+              <a role="button" ng-href="/login" class="btn btn-success">Login</a>
+             </div>
+          </form>
+        </li>
+      </ul>     
+    </div>
+  </div>
+</nav>
+<div style="padding-bottom: 75px;"></div>

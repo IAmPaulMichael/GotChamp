@@ -1,0 +1,171 @@
+<style type="text/css">
+	
+    .panel {
+      box-shadow: 5px 5px 15px #888888;
+    }
+    
+    .error {
+        color: #ff0000;
+    }
+    
+</style>
+<div class="">
+    <div ng-include="'Client/src/app/components/navbar/navbar.html'"></div>
+  <div class="row">
+
+    <div class="col-md-12">
+    <div class="panel panel-info">
+      <div class="panel-heading"><h1 class="panel-title">Register New Account</h1></div>
+        <div class="panel-body">
+            <h1><a href="/">Gotchamp</a></h1>
+            <form class="form-horizontal" name="newAccountForm" novalidate>
+          <div class="reg-form row">
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		 <div class="form-group">
+          	  		    <input class="form-control" tabindex="1" autofocus name='firstName' type='text' ng-required='true' placeholder="Firstname" ng-model='account.firstName'>
+					    <span class="error" ng-show='newAccountForm.firstName.$error.required && newAccountForm.firstName.$dirty'>First name is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+              <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+                  <div class="form-group">
+                      <select tabindex="7" class="form-control" ng-model="account.location" onchange="print_state('state',this.selectedIndex);" id="country" name ="country" ng-init="account.location = 'Japan';" ng-change="account.prefecture = '';"></select>
+                      <script language="javascript">print_country("country");</script>
+                      
+<!--                      <select class="form-control" tabindex="7" ng-model="currentLocation.byGeo" ng-change="account.location = currentLocation.byGeo.name;" ng-options="country.name for country in countries track by country.code">-->
+<!--                    </select>-->
+                      <span class="error" ng-show='newAccountForm.country.$error.required && newAccountForm.country.$dirty'>Country is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+         	  
+          </div>
+          <div class="reg-form row">
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" tabindex="2" name='lastName' placeholder="Lastname" type='text' value="dd" ng-required='true' ng-model='account.lastName'>
+					    <span class="error" ng-show='newAccountForm.lastName.$error.required && newAccountForm.lastName.$dirty'>Last name is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" tabindex="8" name='address1' placeholder="Address1" type='text' ng-required='true' ng-model='account.address1'>
+					    <span class="error" ng-show='newAccountForm.address1.$error.required && newAccountForm.address1.$dirty'>Address2 is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" tabindex="13" name='password' type='password' placeholder="Password" ng-required='true' ng-model='account.password'>
+					    <span class="error" ng-show='newAccountForm.password.$error.required && newAccountForm.password.$dirty'>Password is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          </div>
+           <div class="reg-form row">
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" tabindex="3" name='userName' type='text' placeholder="Username" ng-required='true' ng-model='account.userName'>
+					    <span class="error" ng-show='newAccountForm.userName.$error.required && newAccountForm.userName.$dirty'>Username is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" tabindex="9" name='address2' placeholder="Address2" type='text' ng-required='true' ng-model='account.address2'>
+					    <span class="error" ng-show='newAccountForm.address2.$error.required && newAccountForm.address2.$dirty'>Address2 is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" tabindex="14" name='repeatPassword' type='password' placeholder="Repeat Password" ng-required='true' ng-model='account.confirmPassword'>
+					    <span class="error" ng-show='newAccountForm.confirmPassword.$error.required && newAccountForm.confirmPassword.$dirty'>Repeat Password is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          </div>
+             <div class="reg-form row">
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" tabindex="4" name='email' type='text' placeholder="Email" ng-required='true' ng-model='account.email'>
+					    <span class="error" ng-show='newAccountForm.email.$error.required'>Email is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-2">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+                          <select name="state" id="state" tabindex="10" class="form-control" ng-model="account.state" >
+                              <option selected disabled>Select State</option>
+                          </select>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	    <div class="col-md-2">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+                          <input type="text" class="form-control" ng-model="account.prefecture" placeholder="City" tabindex="11">
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <button style="width:100%;border-radius:0" tabindex="15" ng-disabled="!newAccountForm.$valid" ng-click="register(account)" class="btn btn-lg btn-primary">Register</button>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          </div>
+             <div class="reg-form row">
+          	  <div class="col-md-2">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input class="form-control" name='birthDate' type='date' ng-required='true' ng-model='account.birthDate' tabindex="5">
+					    <span class="error" ng-show='newAccountForm.birthDate.$error.required && newAccountForm.birthDate.$dirty'>Birthdate name is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-2">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <select name="gender" ng-model="account.gender" class="form-control" tabindex="6" ng-init="account.gender = 'Gender'">
+          	  		        <option disabled selected>Gender</option>
+          	  		    	<option value ="Male">Male</option>
+          	  		    	<option value="Female">Female</option>
+          	  		    </select>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+          	  <div class="col-md-4">
+<!--          	  	<form class="form-horizontal">-->
+          	  		<div class="form-group">
+          	  		    <input ng-model="account.contactNumber" class="form-control" name='contactNumber' type='text' ng-required='true' tabindex="12" placeholder="Contact Number">
+                        <span class="error" ng-show='newAccountForm.contactNumber.$error.required && newAccountForm.contactNumber.$dirty'>Contact Number is required.</span>
+          	  		</div>
+<!--          	  	</form>-->
+          	  </div>
+                 <div class="col-md-4">
+                     <div class="form-group">
+                         <p>Upon registering to our online lotto game, you agree to our <a href="/terms-and-conditions">terms and conditions</a>.</p>
+                     </div>
+                 </div>
+          </div>
+            </form>
+        <div class="text-center">Already a member? Log in <a ng-href="/login">here</a>.</div>
+        </div>
+  </div>
+</div>
+</div>
+  <hr>
+</div>

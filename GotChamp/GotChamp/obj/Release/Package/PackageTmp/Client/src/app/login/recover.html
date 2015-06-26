@@ -1,0 +1,39 @@
+<style type="text/css">
+	
+    .panel {
+      box-shadow: 5px 5px 15px #888888;
+    }
+</style>
+<div class="">
+
+    <div ng-include="'Client/src/app/components/navbar/navbar.html'"></div>
+  <div class="row">
+  	 <div class="col-md-12">
+  	 	<div class="panel panel-info">
+  	 		<div class="panel-heading">
+  	 			<h2 class="panel-title">Recover Password</h2>
+  	 		</div>
+  	 		<div class="panel-body"> 
+                <div class="pull-right">
+                    <h3><a href="/">Register for FREE</a></h3>
+                </div>
+                <h2><a href="/">Gotchamp</a></h2>
+  	 		  <div class="row reg-form">
+  	 			 <div class="col-md-4 col-md-offset-4 text-center">
+  	 			 	<form name='recoverForm'class="form-horizontal" novalidate>
+	  	 			 	<div class="form-group">
+	  	 			 		<input type="email" name="userEmail" ng-model="account.userEmail" required class="form-control" placeholder="Enter your Email address" autofocus>
+                            <span ng-show='recoverForm.userEmail.$error.required && recoverForm.$dirty'>Username or Email address is required.</span>
+	  	 			 	</div>
+                  <div class="form-group">
+                    <button style="width:100%;border-radius:0" class="btn btn-success btn-lg" ng-disabled='!recoverForm.$valid' ng-click= 'recover(account);'>Recover my password</button>
+                  </div>
+<!--                        <p>Input your Username or Email address on the field.</p>-->
+  	 			   </form>
+  	 			 </div>
+  	 		   </div>	
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </div>
+</div>

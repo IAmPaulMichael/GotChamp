@@ -1,0 +1,52 @@
+
+<style type="text/css">
+	
+    .panel {
+      box-shadow: 5px 5px 15px #888888;
+    }
+</style>
+<div class="">
+
+    <div ng-include="'Client/src/app/components/navbar/navbar.html'"></div>
+  <div class="row">
+  	 <div class="col-md-12">
+  	 	<div class="panel panel-info">
+  	 		<div class="panel-heading">
+  	 			<h2 class="panel-title">Login</h2>
+  	 		</div>
+  	 		<div class="panel-body"> 
+        <div class="pull-right">
+          <h3><a href="/register">Register for FREE</a></h3>
+        </div>
+  	 		<h2><a href="/">Gotchamp</a></h2>
+        
+  	 		 <div class="row reg-form">
+  	 		 	
+  	 			 <div class="col-md-4 col-md-offset-4 text-center">
+  	 			 	<form name='loginForm'class="form-horizontal">
+	  	 			 	<div class="form-group">
+	  	 			 		<input ng-init = "account.username = user" name = "emailOrUsername" type="text" placeholder="Username" class="form-control" ng-model='account.username' ng-required='true'/><span ng-show='loginForm.emailOrUsername.$error.required && loginForm.emailOrUsername.$dirty'>Email/Username is required.</span>
+	  	 			 	</div>
+	  	 			 	<div class="form-group">
+	  	 			 		<input ng-init = "account.password = pass;"name="pass" type="password" placeholder="Password" class="form-control" ng-model='account.password' ng-required = 'true'/><span ng-show='loginForm.pass.$error.required && loginForm.pass.$dirty'>Password is required.</span>
+	  	 			 	</div>
+              <div class="form-group">
+
+                <button id ="waitMe-ex" style="width:100%;border-radius:0" class="btn btn-success btn-lg" ng-disabled='!loginForm.$valid' ng-click = 'login(account)'>Login</button>
+                <a href="/login/recover">Forgot your password?</a>
+              </div>
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name ="remember" id= "remember"> Remember me
+                  </label>
+                </div>
+              </div>
+  	 			   </form>
+  	 			 </div>
+  	 		   </div>	
+  	 		</div>
+  	 	</div>
+  	 </div>
+  </div>
+</div>

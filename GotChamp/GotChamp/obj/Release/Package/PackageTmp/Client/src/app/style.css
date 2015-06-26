@@ -1,0 +1,89 @@
+.body tr td {
+  text-align: center;
+  line-height: 2px;
+  border-radius: 50%;
+}
+.ads .thumbnail {
+  height: 500px;
+  background-color: #e6e6e6;
+}
+.number {
+  box-shadow: 5px 5px 10px #888888;
+  padding: 8px;
+  border: 2px solid white;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  margin-left: 5px;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+    cursor: pointer;
+}
+.draw-hours {
+  float: left;
+}
+.circle-num {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  float: left;
+  padding: 18px 13px;
+  font-size: 2em;
+  border: 1px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#number:hover {
+  background-color: #7cffb9;
+}
+.circle-selected {
+  background-color: #000DFF;
+  box-shadow: 0px 7px 5px #888888;
+  border: 2px solid #f2f2f2;
+}
+.form-horizontal .reg-form .form-group .form-control,
+.form-horizontal .reg-form .form-group select {
+  height: 50px;
+  border-radius: 0;
+}
+
+.form-horizontal .reg-form.row div {
+    /*padding: 0px 15px 5px 15px;*/
+}
+
+.lucky-numbers-label {
+  background-color: #353740;
+  padding: 10px;
+  color: #6ab07b;
+  text-align: center;
+  box-shadow: 5px 5px 5px #888888;
+}
+.quick-btn > .btn {
+  background-color: #FF530D;
+}
+.well-previous {
+  padding: 5px 10px;
+  background-color: #D1D1D1;
+}
+.goodluck-wrapper td {
+  min-width: 160px;
+}
+.goodluck-num {
+  border: 4px solid black;
+  text-align: center;
+  height: 120px;
+  background-color: brown;
+  border-radius: 30%;
+  box-shadow: 5px 5px 5px #888888;
+}
+.goodluck-num h1 {
+  font-size: 6em;
+  margin-top: 10px;
+  color: white;
+}
+.card {
+  background-color: #04C8D8;
+  border-radius: 5px;
+  padding-bottom: 5px;
+}

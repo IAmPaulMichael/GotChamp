@@ -1,0 +1,24 @@
+<div class=""> 
+		 <div ng-include="'Client/src/app/components/navbar/navbar.html'"></div>
+		 <div class="row">
+		    <div class="col-md-12 text-center">
+		    	<h1 style="font-size:6em;margin:20px;">Thank you for choosing.....</h1>
+		    </div>
+		    <table class="table table-bordered">
+		    	<tbody>
+		    		<tr class="goodluck-wrapper">
+		    			<td ng-repeat="number in combinationNumbers" ><div class="goodluck-num"><h1>{{number}}</h1></div></td>
+		    		</tr>
+		    	</tbody>
+		    </table>
+		       <div class="col-md-12 text-center">
+		    	<h1 style="margin:20px;">Thanks for playing , Good Luck and
+See you soon!</h1>
+             <div class="col-md-4 col-md-offset-4">
+                 <h2>
+                     <button ng-click="done()" class="btn btn-primary btn-block btn-lg">Done !</button>
+                 </h2>
+             </div>
+		    </div>
+		 </div>
+</div>

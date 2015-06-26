@@ -1,0 +1,19 @@
+<div class="container for-ads">
+	 <div ng-include="'Client/src/app/components/navbar/navbar.html'"></div>
+	 <div class="row">
+	 	 <div class="col-md-8 col-md-offset-2">
+	 	 	<div class="alert alert-teals"><b>Heads up! </b> Click advertisement from our sponsor to complete the process...</div>
+	 	 </div>
+	 	 <div class="col-md-12">
+	 	 	
+	 	 </div>
+	 </div>
+    <div class="row gallery">
+        <div ng-repeat="gallery in galleries | filter:{IsPublish:true}" class="col-md-4">
+            <a ng-click="count(gallery.AdvertisementId); notify();" class="thumbnail">
+                <img src="{{gallery.Path}}" alt="Alternate Text" />
+            </a>
+            <h2 class="text-center">{{gallery.Title}}</h2>
+        </div>
+    </div>
+</div>

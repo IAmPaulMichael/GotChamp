@@ -1,0 +1,148 @@
+<style type="text/css">
+  .text-center .btn{
+    min-width: 180px;
+    margin-top: 10px;
+  }
+    label {
+        cursor: pointer;
+    }
+</style>
+<div class="" ng-init="loadCombination(); checkPlayed();">
+
+
+    <div ng-include="'Client/src/app/components/navbar/navbar.html'"></div>
+    <div class="row">
+
+        <div class="text-center alert alert-danger" ng-show="hasPlayed"><span>You've already played for today check your email for confirmation for your copy of combination.</span></div>
+        <div class="col-md-7 text-center">
+            <h3>Play our Online Lotto for a cause!</h3>
+            <h1>Play on for the chance to win tonight's grand prize for FREE!</h1>
+            <h1 style="font-size:6em;"><span class="glyphicon glyphicon-yen" style="font-size: 0.5em;"></span>100,000,000</h1>
+            <div class="col-md-12">
+                <strong>Raffle draw cut-off</strong>
+                <div style="margin-left:30%;">
+                    <div class="draw-hours">
+                        <div class="circle-num">{{remaining.Hours}}</div>
+                        <div>Hours</div>
+                    </div>
+                    <div class="draw-hours">
+                        <div class="circle-num">{{remaining.Minutes}}</div>
+                        <div>Minutes</div>
+                    </div>
+                    <div class="draw-hours">
+                        <div class="circle-num">{{remaining.Seconds}}</div>
+                        <div>Seconds</div>
+                    </div>
+                </div>
+
+            </div>
+            <h6 style="color:gray;margin-top:120px;">Submit your entry before @ 9:00pm JST</h6>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">Previous Raffle Draw</h2>
+                        </div>
+                        <div class="panel-body">
+                            <h3>Winning Number</h3>
+                            <b style="font-size:2em">10-12-45-9-24-03-02</b>
+                            <p style="color:gray">Date:mm/dd/yyyy</p>
+                            <p style="color:gray">Grand Prize: Y 120,000,000</p>
+                            <div class="well-previous">
+                                <h4>Currently, we give away the total prizes of:</h4>
+                                <h2>Y 320,000,000</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-teal">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">Previous Winner</h2>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li style="padding:0" class="list-group-item list-group-item-success">
+                                    <div class="media">
+                                        <div class="media-left">
+
+                                        </div>
+                                        <div class="media-body">
+                                            <p></p>
+                                            <p class="media-heading" id="media-heading">Username</p>
+                                            <p>Location</p>
+                                        </div>
+                                        <div class="media-right">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-default">
+                                    <div class="media">
+                                        <div class="media-left">
+
+                                        </div>
+                                        <div class="media-body">
+                                            <p></p>
+                                            <p class="media-heading" id="media-heading">Username</p>
+                                            <p>Location</p>
+                                        </div>
+                                        <div class="media-right">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-success">
+                                    <div class="media">
+                                        <div class="media-left">
+
+                                        </div>
+                                        <div class="media-body">
+                                            <p></p>
+                                            <p class="media-heading" id="media-heading">Username</p>
+                                            <p>Location</p>
+                                        </div>
+                                        <div class="media-right">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <a class="pull-right" href="/">View All</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 pull-right card">
+
+            <h2 class="lucky-numbers-label">Pick your 7 lucky numbers</h2>
+
+            <div>
+                <table style="width:100%">
+                    <tbody>
+                        <tr>
+                            <td ng-repeat="displayedNumber in displayedNumbers"><div class="number" ng-model="displayedCombination[displayedNumber]" style="width:55px;height:55px;padding:16px;background-color:black;color:white;" ng-click="Clear(displayedNumber);"><label>{{displayedCombination[displayedNumber]}}</label></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <table class="table table-bordered">
+                    <tbody id="tbody">
+                        <tr ng-repeat="combinationRow in combinationRows">
+                            <td ng-repeat="number in numbers | slice: multiplier(combinationRow) : multiplier((combinationRow + 1))"><div class="number" ng-class='{"circle-selected": isSelected(number)}' ng-click="Select(number);" ng-disabled="hasPlayed"><label>{{number}}</label></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-bottom:20px;" class="text-center col-md-12 quick-btn">
+                    <button ng-click="quickPicks();" class="btn btn-danger" ng-disabled="hasPlayed">QUICK PICKS</button>
+                    <button ng-click="clearPicks();" class="btn btn-danger" ng-disabled="hasPlayed">CLEAR</button>
+                </div>
+                <div>
+                    <a role="button" style="width:100%;border-radius:0;height:100px;" class="btn btn-lg btn-success" ng-click="play()" ng-disabled="hasPlayed"><h1>Play Now for Free!</h1></a>
+                </div>
+            </div> <!--Col-md-5-->
+
+        </div>
+    </div>
+</div>

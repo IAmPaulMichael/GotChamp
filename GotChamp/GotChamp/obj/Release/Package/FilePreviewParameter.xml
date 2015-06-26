@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="gotchamp" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Project\\JEAccess\\GotChamp\\GotChamp\\GotChamp\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Project\\JEAccess\\GotChamp\\GotChamp\\GotChamp\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="GotChampDbConnection-local-Web.config Connection String" description="" value="Data Source=.;Initial Catalog=GotChampDb;Integrated Security=True;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Project\\JEAccess\\GotChamp\\GotChamp\\GotChamp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GotChampDbConnection-local']/@connectionString" />
+  </parameter>
+  <parameter name="GotChampDbConnection-Web.config Connection String" description="" value="Server=tcp:kl4ap6o1q0.database.windows.net,1433;Database=GotChampDb;User ID=securitytrainingdbuser@kl4ap6o1q0;Password=Bl@st123;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Project\\JEAccess\\GotChamp\\GotChamp\\GotChamp\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='GotChampDbConnection']/@connectionString" />
+  </parameter>
+</parameters>

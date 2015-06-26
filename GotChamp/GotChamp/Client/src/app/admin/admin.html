@@ -1,0 +1,118 @@
+
+<link href="Client/src/admin/plugins.css" rel="stylesheet">
+
+   
+<section class="page-boxed" id="wrapper">
+	<header id="header">
+		<div class="header-left">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="dashboard.html">
+                         GotChamp Lottery
+                        </a>
+			</div> <!--/Navbar-header -->
+		</div> <!--/Navbar-Left -->
+		<div class="header-right">
+			<div class="navbar navbar-toolbar">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="navbar-minimize">
+						<a href="javascript:void(0);" title="Minimize sidebar">
+                         <i class="fa fa-bars"></i>
+                        </a>
+					</li>
+
+					<li class="navbar-search">
+        <!-- Just view on mobile screen-->
+        <a href="#" class="trigger-search"><i class="fa fa-search"></i></a>
+			        <form class="navbar-form">
+			            <div class="form-group has-feedback">
+			                <input type="text" class="form-control typeahead rounded" placeholder="Search for people, places and things">
+			                <button type="submit" class="btn btn-theme fa fa-search form-control-feedback rounded"></button>
+			            </div>
+			        </form>
+  					</li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right"> 
+					<li class="dropdown navbar-profile">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <span class="meta">
+                                    <span class="avatar"><img src="Client/src/bootstrap/dist/img/avatar/35/17.png" class="img-circle" alt="admin"></span>
+                                    <span class="text hidden-xs hidden-sm text-muted">Admin</span>
+                                    <span class="caret"></span>
+                                </span>
+                            </a>
+                            <!-- Start dropdown menu -->
+                            <ul class="dropdown-menu animated flipInX">
+                                <li class="dropdown-header">Account</li>
+                                <li><a href="page-profile.html"><i class="fa fa-user"></i>View profile</a></li>
+                                <li><a href="mail-inbox.html"><i class="fa fa-envelope-square"></i>Inbox <span class="label label-info pull-right">30</span></a></li>
+                                <li><a href="#"><i class="fa fa-share-square"></i>Invite a friend</a></li>
+                                <li class="dropdown-header">Product</li>
+                                <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                                <li><a href="#"><i class="fa fa-dollar"></i>Earning</a></li>
+                                <li><a href="#"><i class="fa fa-download"></i>Withdrawals</a></li>
+                                <li class="divider"></li>
+                                <li><a href="page-signin.html"><i class="fa fa-sign-out"></i>Logout</a></li>
+                            </ul>
+                            <!--/ End dropdown menu -->
+                        </li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<aside id="sidebar-left" class="sidebar-circle">
+		<div class="sidebar-content">
+			<div class="media">
+				<div class="media-body">
+					<h4 class="media-heading">Hello, <span>Admin</span></h4>
+					<small>Administrator</small>
+				</div>
+			</div>
+		</div><!--/Sidebar-Content-->
+		  <ul class="sidebar-menu">
+			<li class="sidebar-category">
+				  <span>Player Management</span>
+			</li>
+		</ul>
+		<ul class="sidebar-menu">
+			<li class="submenu">
+			     <a href="/admin/upload">
+			     	 <span class="icon"><i class="fa fa-upload"></i></span>
+				     <span class="text">Subscription</span>
+			     </a>	 
+			</li>
+		</ul>
+         <ul class="sidebar-menu">
+			<li class="sidebar-category">
+				  <span>Game Management</span>
+			</li>
+		</ul>
+		<ul class="sidebar-menu">
+			<li class="submenu">
+			     <a href="/admin/upload">
+			     	 <span class="icon"><i class="fa fa-upload"></i></span>
+				     <span class="text">Draw</span>
+			     </a>	 
+			</li>
+		</ul>
+		<ul class="sidebar-menu">
+			<li class="sidebar-category">
+				  <span><a ng-href="/admin/manage/overview">Advertising Management</a></span>
+			</li>
+		</ul>
+		<ul class="sidebar-menu">
+			<li class="submenu">
+                <a ng-href="/admin/manage/sponsors/Active">
+                    <span class="icon"><i class="fa fa-upload"></i></span>
+                    <span class="text">Active Sponsors</span>
+                </a>
+                <a ng-href="/admin/manage/sponsors/Inactive">
+                    <span class="icon"><i class="fa fa-list-alt"></i></span>
+                    <span class="text">InActive Sponsors</span>
+                </a>	 
+			</li>
+		</ul>
+	</aside>
+
+</section>
